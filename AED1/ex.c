@@ -3,23 +3,22 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main(int argc, char *argv[]) {
 
-    char str[10001];
-    int T, i, j;
-    scanf("%d", &T);
-    
-    for(i=0; i<T; i++){
-        scanf("%*c%[^\n]", str);
-        for(j=0; str[j] != '\0'; j++){
-            if(j == 0 || j%2 == 0) printf("%c", str[j]);
+    int i, j, k = 0, n = 0;
+    int op = 0;
+    int a;
+
+    for(a=0; a<=50; a++){
+        n = a;
+        for(i=n/2; i<=n; i++){
+            for(j=2; j<=n; j=j*2){
+                k += n/2;
+                op++;
+            }
         }
-        printf(" ");
-        for(j=0; str[j] != '\0'; j++){
-            if(j%2 != 0) printf("%c", str[j]);
-        }
-        printf("\n");
+        printf("n = %d => k = %d e op = %d\n", a, k, op);
     }
-     
+    
     return 0;
 }
