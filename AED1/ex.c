@@ -1,24 +1,46 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
+void swap(int *v, int i, int j){
 
-    int i, j, k = 0, n = 0;
-    int op = 0;
-    int a;
+    int temp = v[i];
+    v[i] = v[j];
+    v[j] = temp;
+}
 
-    for(a=0; a<=50; a++){
-        n = a;
-        for(i=n/2; i<=n; i++){
-            for(j=2; j<=n; j=j*2){
-                k += n/2;
-                op++;
-            }
-        }
-        printf("n = %d => k = %d e op = %d\n", a, k, op);
-    }
-    
+void shellsort(int *vetor, int tam);
+
+int main(){
+
+    int trocas = 0, vetor[6] = {31,41,59,26,41,56};
+    int i=0;
+
+    shellsort(vetor, 6);
+
+    for(i=0; i<6; i++) printf("%d ", vetor[i]);
+    printf("\n");
+
     return 0;
+}
+
+void shellsort(int *vetor, int tam){
+    int i, j, k, valor, trocas;
+    i = j = valor = trocas = 0;
+    k = 1;
+
+    while(k < tam)  k = 3 * k+1;
+    while(k > 0){
+        for(i=k; i < tam; i++){
+            valor = vetor[i];
+            j = i;
+            while(j > k - 1 && valor <= vetor[j-k]){
+                vetor[j] = vetor[j-k];
+                j -= k;
+                trocas++;
+            }
+            vetor[j] = valor;
+        }
+        k /= 3;
+    }
+
+    printf("Movimentacoes realizadas no shell sort: %d\n", trocas);
 }
