@@ -16,6 +16,7 @@ int main(){
 
     printf("Imprimindo o vetor apos a ordenacao: ");
     for(i=0; i<8; i++) printf("%d ", vetor[i]);
+    printf("\n");
 
     t = clock() - t;
     double time_taken = (double)t / CLOCKS_PER_SEC;
@@ -44,11 +45,9 @@ void bubbleSort(int *vetor, int tam){
             }
         }
         if(verify == 0){
-            printf("Na iteracao: %d verificou-se que nao ha necessidade de continuar as comparacoes\n", tam-i);
-            printf("Retornando...\n");
             printf("Bubble Sort - Movimentacoes realizadas...: %d\n", trocas);
             return;
         }
-    }
-    printf("Bubble Sort - Movimentacoes realizadas...: %d\n", trocas);
+        bubbleSort(vetor, 8);
+    } 
 }
