@@ -48,6 +48,6 @@ void bubbleSort(int *vetor, int tam){
             printf("Bubble Sort - Movimentacoes realizadas...: %d\n", trocas);
             return;
         }
-        bubbleSort(vetor, 8);
+        bubbleSort(vetor, 8); //passo recursivo
     } 
 }

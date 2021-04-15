@@ -9,15 +9,7 @@ int main(){
 
     for(i=0; i<100; i++){
 
-        if(i<50){
-            if(i%2 == 0){
-                vetor[i] = (i+1) * 7 - 5;
-            } else vetor[i] = (i+1) * 4;
-        } else{
-            if(i%2 == 0){
-                vetor[i] = (i) * 2 - 49;
-            } else vetor[i] = (i) * 3 - 10;
-        }
+        vetor[i] = 100 - i;
     }
    
     shellSort(vetor, 100);
@@ -30,21 +22,20 @@ int main(){
 }
 
 void shellSort(int *vetor, int tam){
-    int i, j, k, valor, trocas;
-    i = j = valor = trocas = 0;
+    int i, j, k, trocas;
+    i = j = trocas = 0;
     k = 1;
 
     while(k < tam)  k = 3 * k+1;
     while(k > 0){
         for(i=k; i < tam; i++){
-            valor = vetor[i];
             j = i;
-            while(j > k - 1 && valor >= vetor[j-k]){
+            while(j > k - 1 && vetor[i] >= vetor[j-k]){
                 vetor[j] = vetor[j-k];
                 j -= k;
                 trocas++;
             }
-            vetor[j] = valor;
+            vetor[j] = vetor[i];
         }
         k /= 3;
     }

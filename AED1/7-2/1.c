@@ -43,7 +43,7 @@ void bubbleSort(int *vetor, int tam){
             verify++;
             }
         }
-        if(verify == 0){
+        if(verify == 0){ //verificando que o algoritmo n realizou nenhuma troca
             printf("Na iteracao: %d verificou-se que nao ha necessidade de continuar as comparacoes\n", tam-i);
             printf("Retornando...\n");
             printf("Bubble Sort - Movimentacoes realizadas...: %d\n", trocas);

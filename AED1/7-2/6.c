@@ -73,7 +73,7 @@ void shellSort(unsigned long int *vetor, int tam){
         for(i=k; i < tam; i++){
             valor = vetor[i];
             j = i;
-            while(j > k - 1 && valor >= vetor[j-k]){ //para decrescente <=
+            while(j > k - 1 && vetor[i] >= vetor[j-k]){ //para decrescente <=
                 vetor[j] = vetor[j-k];
                 j -= k;
                 trocas++;

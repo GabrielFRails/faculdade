@@ -83,8 +83,12 @@ void quickSort(int *vet, int began, int tam){
 
     while (i <= j){
 
-        while (vet[i] < pivo && i < tam) i++;
-        while (vet[j] > pivo && j > began)j--;
+        while (vet[i] < pivo && i < tam){
+            i++;
+        }
+        while (vet[j] > pivo && j > began){
+            j--;
+        }
 
         if (i <= j){
             aux = vet[i];
