@@ -108,3 +108,32 @@ void quickSort(int *vet, int began, int tam){
     quickSort(vet, i, tam);
     }
 }
+
+void heapify(int *vet, int size_vetor, int i){
+
+    int max_value = i;
+    int leftChild = 2 * i + 1;
+    int rightChild = 2 * i + 2;
+
+    if (leftChild < size_vetor && vet[leftChild] > vet[max_value])
+        max_value = leftChild;
+
+    if (rightChild < size_vetor && vet[rightChild] > vet[max_value])
+        max_value = rightChild;
+
+    if (max_value != i){
+        swap(vet, i, max_value);
+        heapify(vet, size_vetor, max_value);
+    }
+}
+
+void heapSort(int *vet, int size_vetor){
+
+    for (int i = size_vetor / 2 - 1; i >= 0; i--)
+        heapify(vet, size_vetor, i);
+
+    for (int i = size_vetor - 1; i >= 0; i--){
+        swap(vet, 0, i);
+        heapify(vet, i, 0);
+    }
+}

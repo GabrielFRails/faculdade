@@ -25,7 +25,7 @@ void swap(int *v, int i, int j){
 }
 
 void quickSort(int *vet, int began, int tam){
-    int i, j, pivo, aux, trocas = 0, trocasQuick = 0;
+    int i, j, pivo;
     i = began;
     j = tam - 1;
     pivo = vet[(began + tam) / 2];
@@ -42,7 +42,6 @@ void quickSort(int *vet, int began, int tam){
             printf("Trocando %d e %d de lugar\n", vet[i], vet[j]);
             i++;
             j--;
-            trocasQuick += 1;
         }
     }
 
