@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void binarySearch_iterative(int *vector, int vectorSize, int key);
 void sequencialSearch(int *vector, int vectorSize, int key);
 
 int main(){
@@ -22,30 +21,18 @@ void sequencialSearch(int *vector, int vectorSize, int key){
             repetidos[tam-1] = i;
             tam++;
             n_repetidos = (int *) realloc(repetidos, sizeof(int)*tam);
+            repetidos = n_repetidos;
         }
     }
     
-    
-    for(i=0; i<tam-1; i++){
-        printf("%d, ", repetidos[i]);
-    }
-    printf("\n");
-}
-
-void binarySearch_iterative(int *vector, int vectorSize, int key){
-
-    int begin = 0, end = vectorSize - 1, i=0;
-
-    while(begin <= end){
-        i = (begin+end)/2;
-        //printf("%d + %d /2 = %d\n", begin, end, i);
-        if(vector[i] == key){
-            //return i;
+    tam -= 1;
+    for(i=0; i<tam; i++){
+        if(i == tam -1){
+            printf("%d\n", repetidos[i]);
         }
-        if(vector[i] < key){
-            begin = i + 1;
-        } else{
-            end = i;
+        else{
+            printf("%d, ", repetidos[i]);
         }
     }
+    free(repetidos);
 }

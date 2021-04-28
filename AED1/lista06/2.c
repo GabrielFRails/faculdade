@@ -46,8 +46,7 @@ int binarySearch_iterative(int *vector, int vectorSize, int key){
     int begin = 0, end = vectorSize - 1, i=0;
 
     while(begin <= end){
-        i = (begin+end)/2;
-        //printf("%d + %d /2 = %d\n", begin, end, i);
+        i = begin + (end - begin) / 2;
         if(vector[i] == key){
             comparacoesBin++;
             return i;
