@@ -14,15 +14,20 @@ int main(){
 
 void sequencialSearch(int *vector, int vectorSize, int key){
 
-    int i = 0, *repetidos = (int*) malloc(sizeof(int)), tam = 1, *n_repetidos;
+    int i = 0, *repetidos, tam = 1;
     while(i<vectorSize){
-        i++;
         if(vector[i] == key){
-            repetidos[tam-1] = i;
-            tam++;
-            n_repetidos = (int *) realloc(repetidos, sizeof(int)*tam);
-            repetidos = n_repetidos;
+            if(tam == 1){
+                repetidos = (int*) malloc(sizeof(int) * tam);
+                repetidos[tam-1] = i;
+                tam++;
+            } else{
+                repetidos = realloc(repetidos, sizeof(int)*tam);
+                repetidos[tam-1] = i;
+                tam++;
+            }
         }
+        i++;
     }
     
     tam -= 1;
