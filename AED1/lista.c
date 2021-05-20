@@ -17,10 +17,20 @@ void imprime();
 void inserir(int num);
 void excluir(int num);
 
+void limpar_lista(){
+    p = prim;
+    q = p;
+    for(int i=1; i<=qtd; i++){
+        free(p);
+        p = q->link;
+        q = p;
+    }
+}
+
 int main() {
     prim = NULL;
     printf("Informe a quantidade de no\'s(elementos): ");
-    scanf("%u", & qtd);
+    scanf("%u", &qtd);
 
     for (int i = 1; i <= qtd; i++) {
         inserir(64 + i);
@@ -33,6 +43,8 @@ int main() {
     }
 
     printf("fim da lista\n\n");
+    //limpar_lista();
+    excluir(65);
     return 0;
 }
 
