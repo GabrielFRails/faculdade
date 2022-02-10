@@ -6,6 +6,6 @@ char process(char x) {
 
 int main() {
    printf("%d\n", process(1));
-   printf("%d\n", process(200));
+   printf("%d\n", process(50));
    return 0;
 }
