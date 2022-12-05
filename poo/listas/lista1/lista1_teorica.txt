@@ -1,6 +1,6 @@
 1a) É um paradigma de programação voltado para análise, projeto e programação de sistemas de software baseado na abstração, composição e interação de camadas de código baseadas em elementos da vida real.
 
-1b) A priori criamos uma classe do tipo public ou private, definimos seus métodos e construtor a partir de uma análise do que queremos que esse objeto represente da vida real.
+1b) A priori declaramos uma classe, definimos seus métodos e construtor a partir de uma análise do que queremos que esse objeto represente da vida real.
 Por exemplo, criamos a classe Pessoa, definimos seus atributos como nome, idade, restrições alimentares etc. Depois criamos métodos/funções que abstraem seus corpomentos da vida real, como andar, correr, dormir, etc.
 
 1c) Uma abstração da realidade. Ora, podemos com os recursos da linguagens criar classes que represeta determinados contextos da vida real, criando nelas atributos e métodos que representam com a melhor fidelidade possível as características e comportamentos do objeto escolhido para representar em código.
