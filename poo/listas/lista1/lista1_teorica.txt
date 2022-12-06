@@ -15,3 +15,8 @@ Por exemplo, criamos a classe Pessoa, definimos seus atributos como nome, idade,
 - protected: Outro exemplo de modificador que só pode ser usado em membros de classe. Membros declarados como protected só podem ser acessados por classes do mesmo pacote java ou então por meio de herança. Contudo, esse acesso por herança é somente via classes declaradas no mesmo pacote.
 
 - default (padrão): Caso nenhuma das opções acima tenha sido usada ao declarar uma classe,essa será tida como default, ou seja, a classe e/ou seus membros podem ser acessados somente por classes do mesmo pacote.
+
+3 a) Uma associação entre classes define que os objetos de determinada classe estão conectados de outra classe.
+3 b) Generalização: é um tipo de associação em que classes são combinadas em uma só. Criando uma classe mais genérica, podemos fazer com que suas propriedades sejam "herdadas" por outras classes mais especialistas. Cria-se então uma relação de "B é um tipo de A", em que A é uma superclasse e B uma subclasse. Um exemplo disso seria uma classe que realiza as operações básicas de uma banco de dados, como abrir, manter e fechar conexão com o banco e fazer operações get e put, outras classes mais específicas herdam essa para evitar re-escrita desnecessária de código no sistema.
+
+4 a) É "esconder" métodos e atributos que não convém liberar para acesso externo, podendo representar rotinas e características. Seu principal objetivo é impedir acesso direto a esses atributos, colocando como alternativa métodos para validar e realizar alterações. Escondendo os detalhes das implementações, o desenvolvedor consegue focar no trabalho em um nível mais alto de abstração.
