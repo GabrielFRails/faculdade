@@ -1,0 +1,8 @@
+1- Os padrões de projeto descrevem problemas usuais e cotidianos no mundo da programação, assim como a essência de solução. Sua finalidade é prover um meio de solucionar esses problemas com reuso de código em projetos que, apesar de diferentes, podem ter os mesmos problemas relacionados a projeção e execuação de arquiteturas.
+
+2- 
+	- Criação: define padrões e boas práticas para criar e instanciar classes/objetos. Como por exemplo definir uma nomenclatura significativa e boa codificação evitando dependências e acoplamentos desnecessários, que podem causar comportamentos inesperados e dificultam a manutenção do código fonte.
+	- Estruturais: define padrões e boa práticas para a estrutura e codificação interna das classes. Como compor corretamente a interface de uma classe.
+	- comportamentais: define padrões e boa práticas para definir como uma classe/objeto se comunicam com outras classes/objetos
+
+3- 
