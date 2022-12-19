@@ -5,4 +5,4 @@
 	- Estruturais: define padrões e boa práticas para a estrutura e codificação interna das classes. Como compor corretamente a interface de uma classe.
 	- comportamentais: define padrões e boa práticas para definir como uma classe/objeto se comunicam com outras classes/objetos
 
-3- 
+3- Um Proxy basicamente funciona como um "intermediário" entre o interessado em usar a classe e a classe em si. Ao invés de por validações no escopo da casse o proxy fica responsável por fazer essas validações e por exemplo. A vantagem é que temos um objeto/classe intermediador com as mesmas funcionalidades da classe principal, a disvantagem é que esse intermédio por colocar latência no tempo de execução.
